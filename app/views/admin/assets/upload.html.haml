@@ -1,0 +1,35 @@
+- # encoding: utf-8
+-  body_classes << 'reversed'
+- include_stylesheet 'admin/assets'
+- include_stylesheet 'admin/asset_uploader'
+- include_javascript 'admin/jquery.1.8.2.min.js'
+- include_javascript 'admin/jquery.ui.widget.js'
+- include_javascript 'admin/jquery.iframe-transport.js'
+- include_javascript 'admin/jquery.fileupload.js'
+- include_javascript 'admin/asset_uploader'
+- content_for(:page_scripts) do
+  :plain
+    window._authenticity_token = '#{form_authenticity_token}';
+
+%h1
+  = t('paperclipped_uploader.asset_uploader')
+
+#multi-fileupload
+  %p.formnote
+    %strong
+      = t('paperclipped_uploader.choose_files')
+    = t('paperclipped_uploader.choose_file_description')
+
+  .form-area
+    #upload-button
+      %span.icon +
+      %span.label
+        = t('paperclipped_uploader.add_files')
+      %input#fileupload{ :type => "file", :name => "asset[asset][]", :multiple => "multiple", :'data-url' => "/admin/assets/uploader" }
+
+  %p.formnote
+    %strong
+      = t('paperclipped_uploader.label_files')
+    = t('paperclipped_uploader.label_files_description')
+
+  #files.files

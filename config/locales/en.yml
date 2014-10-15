@@ -1,0 +1,19 @@
+---
+en:
+  paperclipped_uploader:
+    asset_uploader: Asset uploader
+    choose_files: 1. Choose files to upload.
+    choose_file_description: ! 'The big ''add files'' link below will bring up a file-chooser.
+      Select as many files as you like: they will queue up and upload one at a time.
+      Click on ''+ add files'' again to add more files to the back of the queue.'
+    label_files: 3. Label individual files.
+    label_files_description: Each uploading file will appear below. When it's complete,
+      and processed, a small form will appear so that you can give it a more specific
+      title and description. Those forms can be submitted without interrupting other
+      uploads.
+    save: Save
+    title: Title
+    caption: Caption
+    error: ! 'Sorry! Something went wrong:'
+    bulk_uploader: bulk uploader
+    add_files: Add files...

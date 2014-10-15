@@ -1,0 +1,19 @@
+---
+de:
+  paperclipped_uploader:
+    asset_uploader: Multi-Dokumenten Upload
+    choose_files: 1. Wählen Sie die Dokumente für den Upload aus.
+    choose_file_description: Der große 'Dateien hinzufügen...' Knopf öffnet den Dateiauswahl-Dialog.
+      Wählen Sie hier die Dateien aus, die Sie auf den Server laden wollen. Diese
+      Dateien werden einer Warteschlange hinzugefügt und nacheinander auf den Server
+      geladen. Alternativ können Sie die Datein mit Drag & Drop auf den Knopf ziehen.
+    label_files: 2. Beschriften Sie die Dateien individuell.
+    label_files_description: Jede hochzuladende Datei erscheint hier. Wenn der Upload
+      fertig ist, haben Sie die Möglichkeit jede Datei individuell zu beschriften.
+      Klicken Sie danach auf 'Sichern', um Ihre geänderte Beschriftung zu speichern.
+    save: Sichern
+    title: Title
+    caption: Beschriftung
+    error: ! 'Fehler beim Upload:'
+    bulk_uploader: Multi-Upload
+    add_files: Dateien hinzufügen...
