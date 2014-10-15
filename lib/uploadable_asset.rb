@@ -1,4 +1,6 @@
 # encoding: utf-8
+require 'mimetype_fu'
+
 module UploadableAsset
   
   class String
