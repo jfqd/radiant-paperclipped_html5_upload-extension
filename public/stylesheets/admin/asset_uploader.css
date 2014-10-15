@@ -4,8 +4,8 @@
 .formnote { font-size: 1em; }
 .formnote strong { display: block; color: #fff; margin-bottom: 5px; }
 .form-area { display: block; margin: 25px 0; }
-#upload-button { background-color: #449d44; border-color: #398439; padding: 12px 24px; font-size: 14px; line-height: 1.42857143; display: inline; position: relative; }
-#upload-button:hover { background-color: #449d44; border-color: #398439; }
+#upload-button { background-color: green; border-color: #398439; padding: 12px 24px; font-size: 14px; line-height: 1.42857143; display: inline; position: relative; border-radius: 5px; }
+#upload-button:hover { background-color: #449d44; }
 #upload-button .icon { font-weight: bold; font-size: 16px; }
 #upload-button .label { font-size: 14px; font-weight: 400; line-height: 1.42857143; }
 #fileupload {position: absolute; top: 0; right: 0; margin: 0; opacity: 0; -ms-filter: 'alpha(opacity=0)'; font-size: 200px; direction: ltr; cursor: pointer; }
