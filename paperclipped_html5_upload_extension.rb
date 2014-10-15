@@ -1,6 +1,6 @@
 # Uncomment this if you reference any of your controllers in activate
 require_dependency 'application_controller'
-require "radiant-paperclipped_html5-extension"
+require "radiant-paperclipped_html5_upload-extension"
 
 class PaperclippedHtml5UploadExtension < Radiant::Extension
   version     RadiantPaperclippedHtml5UploadExtension::VERSION
