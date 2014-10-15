@@ -8,4 +8,4 @@
 #upload-button:hover { background-color: #449d44; }
 #upload-button .icon { font-weight: bold; font-size: 16px; }
 #upload-button .label { font-size: 14px; font-weight: 400; line-height: 1.42857143; }
-#fileupload {position: absolute; top: 0; right: 0; margin: 0; opacity: 0; -ms-filter: 'alpha(opacity=0)'; font-size: 200px; direction: ltr; cursor: pointer; }
+#fileupload { position: absolute; top: 0; right: 0; margin: 0; opacity: 0; -ms-filter: 'alpha(opacity=0)'; font-size: 40px; direction: ltr; cursor: pointer; }
