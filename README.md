@@ -1,7 +1,7 @@
-# Paperclipped html5 Uploader
+# Paperclipped html5 Uploader Extension
 
-Html5 file uploader for Radiant CMS. Build on to of jQuery-File-Upload https://github.com/blueimp/jQuery-File-Upload jquery Plugin.
+html5 file upload for Radiant CMS. Build on to of [jQuery-File-Upload](https://github.com/blueimp/jQuery-File-Upload) jQuery Plugin.
 
-This plugin is based on the Paperclipped Uploader extension from William Ross which included a flash upload, but not a html5 upload.
+This Extension is based on the [Paperclipped Uploader](https://github.com/spanner/radiant-paperclipped_uploader-extension) extension from William Ross which included a flash upload, but not a html5 upload.
 
 (c) 2014 S. Husch | qutic development
