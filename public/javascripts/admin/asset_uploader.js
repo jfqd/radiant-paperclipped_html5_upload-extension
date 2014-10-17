@@ -44,10 +44,12 @@ jQuery(document).ready(function($){
   });
 
   $('#fileupload').fileupload({
+    // https://github.com/blueimp/jQuery-File-Upload/wiki/Options
     dropZone: $('#multi-fileupload'),
     dataType: 'json',
     formAcceptCharset: 'utf-8',
     singleFileUploads: true,
+    limitConcurrentUploads: 1,
     add: function (e, data) {
       // add key+value to queue
       fileQueue[fileName]=fileId;
@@ -77,7 +79,9 @@ jQuery(document).ready(function($){
         $form.append('<input name="commit" type="submit" id="submit_' + asset_id + '" value="Speichern" />');
         $form.append('<a id="cancel_' + asset_id + '" href="#">Abbrechen</a>');
         $('#'+fileQueue[dataFile]).html($form).append('<a href="/admin/assets/' + asset_id + '/edit" id="filename_' + asset_id + '" style="display:none;">' + dataFile + '</a>');
-        // setup vars
+        // Remove file from hash
+        delete fileQueue[dataFile];
+        // Setup vars for events
         var my_form = $( '#asset_form_' + asset_id );
         var my_filename = $( '#filename_' + asset_id );
         var my_cancel = $( '#cancel_' + asset_id );
@@ -90,11 +94,12 @@ jQuery(document).ready(function($){
             return false;
           }
         });
-        //delete fileQueue[dataFile];
+        // Cancel event
         my_cancel.click(function() {
           my_filename.show();
           my_form.hide();
         });
+        // Submit Event
         my_submit.click(function() {
           var title = $('#asset_title_' + asset_id);
           var caption = $('#asset_caption_' + asset_id);
@@ -105,13 +110,13 @@ jQuery(document).ready(function($){
           } else {
             title.removeClass('validation-error');
           }
-          // disable input fields
+          // Disable input fields
           my_submit.attr('disabled','disabled');
           title.attr('disabled','true');
           caption.attr('disabled','true');
           my_cancel.hide();
-          // construct data
-          var data = 'asset[title]=' + encodeURIComponent(title.val()) + 
+          // Construct data
+          var data = 'asset[title]=' + encodeURIComponent(title.val()) +
                      '&asset[caption]=' + encodeURIComponent(caption.val());
           $.ajax({
             url: '/admin/assets/' + asset_id + '/describe',
@@ -121,7 +126,6 @@ jQuery(document).ready(function($){
             success: function (response) {
               my_filename.show();
               my_form.hide();
-              console.log("done!");
             }
           }).fail(function() {
             title.attr('disabled','false');
