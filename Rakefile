@@ -99,10 +99,10 @@ namespace :spec do
   end
 end
 
-desc 'Generate documentation for the paperclipped_uploader extension.'
+desc 'Generate documentation for the paperclipped_html5_upload extension.'
 Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'PaperclippedUploaderExtension'
+  rdoc.title    = 'PaperclippedHtml5UploadExtension'
   rdoc.options << '--line-numbers' << '--inline-source'
   rdoc.rdoc_files.include('README')
   rdoc.rdoc_files.include('lib/**/*.rb')

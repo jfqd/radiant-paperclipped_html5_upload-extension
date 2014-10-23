@@ -6,18 +6,18 @@ namespace :radiant do
       task :migrate => :environment do
         require 'radiant/extension_migrator'
         if ENV["VERSION"]
-          PaperclippedUploaderExtension.migrator.migrate(ENV["VERSION"].to_i)
+          PaperclippedHtml5UploadExtension.migrator.migrate(ENV["VERSION"].to_i)
         else
-          PaperclippedUploaderExtension.migrator.migrate
+          PaperclippedHtml5UploadExtension.migrator.migrate
         end
       end
       
       desc "Copies public assets of the Paperclipped Uploader to the instance public/ directory."
       task :update => :environment do
         is_svn_or_dir = proc {|path| path =~ /\.svn/ || File.directory?(path) }
-        puts "Copying assets from PaperclippedUploaderExtension"
-        Dir[PaperclippedUploaderExtension.root + "/public/**/*"].reject(&is_svn_or_dir).each do |file|
-          path = file.sub(PaperclippedUploaderExtension.root, '')
+        puts "Copying assets from PaperclippedHtml5UploadExtension"
+        Dir[PaperclippedHtml5UploadExtension.root + "/public/**/*"].reject(&is_svn_or_dir).each do |file|
+          path = file.sub(PaperclippedHtml5UploadExtension.root, '')
           directory = File.dirname(path)
           mkdir_p RAILS_ROOT + directory
           cp file, RAILS_ROOT + path
