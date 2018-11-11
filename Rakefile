@@ -109,7 +109,7 @@ Rake::RDocTask.new(:rdoc) do |rdoc|
 end
 
 # For extensions that are in transition
-desc 'Test the paperclipped_uploader extension.'
+desc 'Test the paperclipped_html5_upload extension.'
 Rake::TestTask.new(:test) do |t|
   t.libs << 'lib'
   t.pattern = 'test/**/*_test.rb'
