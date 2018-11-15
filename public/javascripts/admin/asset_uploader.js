@@ -15,7 +15,7 @@ jQuery(document).ready(function($){
   }
   
   // Make Rails happy
-  $("body").bind("ajaxSend", function(elm, xhr, s){
+  $(document).bind("ajaxSend", function(elm, xhr, s){
     if (s.type == "POST" || s.type == "PUT") {
       xhr.setRequestHeader('X-CSRF-Token', window._authenticity_token);
     }
