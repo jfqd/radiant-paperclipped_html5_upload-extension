@@ -74,7 +74,7 @@ jQuery(document).ready(function($){
         var asset_id = data.result.asset_id;
         var dataFile = data.files[0]['name'];
         $form = $('<form id="asset_form_' + asset_id + '" action="/admin/assets/' + asset_id + '/describe" method="put"></form>');
-        $form.append('<label><span>Title</span><input id="asset_title_' + asset_id + '" name="asset[title]" type="text" value="' + dataFile + '" /></label>');
+        $form.append('<label><span>Title</span><input id="asset_title_' + asset_id + '" name="asset[title]" type="text" value="' + dataFile.replace(/_/g, " ").replace(/\.[^/.]+$/, "") + '" /></label>');
         $form.append('<label><span>Caption</span><input id="asset_caption_' + asset_id + '" name="asset[caption]" type="text" value="" /></label>');
         $form.append('<input name="commit" type="submit" id="submit_' + asset_id + '" value="Speichern" />');
         $form.append('<a id="cancel_' + asset_id + '" href="#">Abbrechen</a>');
