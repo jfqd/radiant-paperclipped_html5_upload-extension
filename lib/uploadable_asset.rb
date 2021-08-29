@@ -5,7 +5,20 @@ module UploadableAsset
   
   class String
     def umlaut_filter
-      self.gsub("ä", "ae").gsub("ö", "oe").gsub("ü", "ue").gsub("Ä", "Ae").gsub("Ö", "Oe").gsub("Ü", "Ue").gsub("ß", "ss").gsub("®", "")
+      self.gsub("ä", "ae").
+           gsub([97, 204, 136].pack('c*').force_encoding('UTF-8'),"ae").
+           gsub("ö", "oe").
+           gsub([111, 204, 136].pack('c*').force_encoding('UTF-8'),"oe").
+           gsub("ü", "ue").
+           gsub([117, 204, 136].pack('c*').force_encoding('UTF-8'),"ue").
+           gsub("Ä", "Ae").
+           gsub([65, 204, 136].pack('c*').force_encoding('UTF-8'),"Ae").
+           gsub("Ö", "Oe").
+           gsub([79, 204, 136].pack('c*').force_encoding('UTF-8'),"Oe").
+           gsub("Ü", "Ue").
+           gsub([85, 204, 136].pack('c*').force_encoding('UTF-8'),"Ue").
+           gsub("ß", "ss").
+           gsub("®", "")
     rescue Exception => e
       Rails.logger.warn("[UploadableAsset#umlaut_filter] Error: #{e.message}")
       self
