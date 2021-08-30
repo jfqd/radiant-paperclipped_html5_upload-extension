@@ -4,4 +4,4 @@ html5 file upload for Radiant CMS. Build on to of [jQuery-File-Upload](https://g
 
 This Extension is based on the [Paperclipped Uploader](https://github.com/spanner/radiant-paperclipped_uploader-extension) extension from William Ross which included a flash upload, but not a html5 upload.
 
-(c) 2014-2020 S. Husch | qutic development GmbH
+(c) 2014-2021 qutic development GmbH
